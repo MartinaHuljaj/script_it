@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "235320363613",
+    "project_id": "scriptit-ed51c",
+    "storage_bucket": "scriptit-ed51c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235320363613:android:cb7bd625303f0ff31c5bb4",
+        "android_client_info": {
+          "package_name": "com.example.script_it"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235320363613-76u20bldgmlb4sdi0bch4ie4dtoeu03g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.script_it",
+            "certificate_hash": "c78233af2424aba3e9eeb7d047f53a77351c8cbd"
+          }
+        },
+        {
+          "client_id": "235320363613-822ung547ffkgf4c753vi0roeauaa1f8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgTBSY0MsfKr1LqYZ82-es8DdwPIVDfWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235320363613-822ung547ffkgf4c753vi0roeauaa1f8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
