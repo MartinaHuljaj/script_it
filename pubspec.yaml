@@ -38,8 +38,8 @@ dependencies:
   downloads_path_provider_28: ^0.1.2
   auto_reload: ^1.0.0
   dotted_border: ^2.0.0
-
-
+  path:
+  path_provider:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.5
@@ -54,6 +54,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.1
+  firebase_auth:
+  firebase_core:
+  google_sign_in:
+  file_picker:
+  
 
 
 # For information on the generic Dart part of this file, see the
