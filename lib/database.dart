@@ -41,11 +41,9 @@ class Storage {
         final directory = await getExternalStorageDirectory();
         final directoryPath = directory?.path;
         final fileNameNoExt = basenameWithoutExtension(fileName!);
-        File('$directoryPath/$fileNameNoExt.txt').create(recursive: true);
+        await File('$directoryPath/$fileNameNoExt.txt').create(recursive: true);
         File textFile = File('$directoryPath/$fileNameNoExt.txt');
-        for (var i = 0; i < final_response.length - 1; i++) {
-          textFile.writeAsString(final_response[i]);
-        }
+        textFile.writeAsString(final_response);
 
         await storage.ref('$username/$fileNameNoExt.txt').putFile(textFile);
       } on firebase_core.FirebaseException catch (e) {
