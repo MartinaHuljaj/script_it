@@ -45,32 +45,38 @@ class _BodyState extends State<Body> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            OutlinedButton(
-              onPressed: this.click,
-              style: OutlinedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(45)),
-                shadowColor: Colors.grey,
-                backgroundColor: Colors.white,
-                side: BorderSide(color: Colors.grey),
-              ),
-              child: Padding(
-                  padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      Image(
-                          image: AssetImage('assets/google_logo.png'),
-                          height: 35),
-                      Padding(
-                          padding: EdgeInsets.only(left: 10),
-                          child: Text('Sign in with Google',
-                              style: TextStyle(
-                                  color: Colors.grey[700],
-                                  fontSize: 20,
-                                  fontFamily: 'Anton')))
-                    ],
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                  width: 300,
+                  height: 100,
+                  child: OutlinedButton(
+                    onPressed: this.click,
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(45)),
+                      shadowColor: Colors.grey,
+                      backgroundColor: Colors.white,
+                      side: BorderSide(color: Colors.grey),
+                    ),
+                    child: Padding(
+                        padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Image(
+                                image: AssetImage('assets/google_logo.png'),
+                                height: 35),
+                            Padding(
+                                padding: EdgeInsets.only(left: 10),
+                                child: Text('Sign in with Google',
+                                    style: TextStyle(
+                                        color: Colors.grey[700],
+                                        fontSize: 20,
+                                        fontFamily: 'Anton')))
+                          ],
+                        )),
                   )),
             )
           ],
@@ -79,18 +85,7 @@ class _BodyState extends State<Body> {
 
   Widget loginPage() {
     return Column(
-      children: [
-        Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/pozadina.png"), fit: BoxFit.cover),
-          ),
-          child: Padding(
-              padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
-              child: Text('nekitext')),
-        ),
-        googleloginButton()
-      ],
+      children: [googleloginButton()],
     );
   }
 
