@@ -55,7 +55,6 @@ class Storage {
   Future<firebase_storage.ListResult> listFiles() async {
     firebase_storage.ListResult results =
         await storage.ref('$username').listAll();
-
     return results;
   }
 
@@ -84,7 +83,7 @@ class Storage {
     }
   }
 
-  void deleteFile(String imageName) {
+  Future<void> deleteFile(String imageName) async {
     final fileRef = storage.ref("$username/$imageName");
     fileRef.delete();
   }

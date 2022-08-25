@@ -28,7 +28,17 @@ class _FileUploadState extends State<FileUpload> {
     var result = await FilePicker.platform.pickFiles(allowMultiple: false);
     final filePath = result?.files.single.path;
     final fileName = result?.files.single.name;
-    storage.uploadFile(filePath, fileName);
+    await storage.uploadFile(filePath, fileName);
+    setState(() {});
+  }
+
+  void deleteFile(fileName) async {
+    await storage.deleteFile(fileName);
+    setState(() {});
+  }
+
+  Future<firebase_storage.ListResult> listFiles() async {
+    return storage.listFiles();
   }
 
   @override
@@ -68,7 +78,7 @@ class _FileUploadState extends State<FileUpload> {
               ),
             ),
             FutureBuilder(
-                future: storage.listFiles(),
+                future: listFiles(),
                 builder: (BuildContext context,
                     AsyncSnapshot<firebase_storage.ListResult> snapshot) {
                   if (snapshot.connectionState == ConnectionState.done &&
@@ -120,9 +130,10 @@ class _FileUploadState extends State<FileUpload> {
                                             color: Colors.white,
                                             padding: EdgeInsets.all(0),
                                             alignment: Alignment.centerRight,
-                                            onPressed: () => storage.deleteFile(
-                                                snapshot
-                                                    .data!.items[index].name),
+                                            onPressed: () => {
+                                              deleteFile(snapshot
+                                                  .data!.items[index].name)
+                                            },
                                           )
                                         ],
                                       ))
